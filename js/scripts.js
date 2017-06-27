@@ -205,6 +205,10 @@ $(function() {
 		var t = $(this).parents('.card__gallery').find('.card__gallery--main');
 		t.slick('slickGoTo',parseInt($(this).attr('data')-1));
 	});
+	$('.nav--item.has-sub .nav--link').on('click', function(e) {
+		e.preventDefault();
+		$(this).parent('.nav--item').toggleClass('is-active');
+	});
 	
 	$(window).on('resize', function() {
 		detectDevice();

@@ -161,18 +161,16 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 /* Core */
 
 .panel {
-	overflow:hidden;
 	position:relative;
 	background:#ffffff;
 }
 .panel:before {
 	content:'';
 	position:absolute;
-	left:50%;
+	left:0;
 	top:0;
-	width:1920px;
+	width:100%;
 	height:100%;
-	margin-left:-960px;
 	background:rgb(72,85,99);
 	background:-moz-linear-gradient(left, rgba(72,85,99,1) 0%, rgba(41,50,60,1) 100%);
 	background:-webkit-linear-gradient(left, rgba(72,85,99,1) 0%,rgba(41,50,60,1) 100%);
@@ -216,7 +214,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	color:#ffffff;
 	font-size:13px;
 	line-height:18px;
-	padding:8px 14px 6px 15px;
+	padding:8px 14px 8px 15px;
 }
 .nav--link:hover {
 	color:#999999;
@@ -2999,7 +2997,84 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 		display:none;
 	}
 }
+@media all and (min-width:961px) {
+	.nav--link {
+		-webkit-transition:background 0.1s ease-in;
+		transition:background 0.1s ease-in;
+	}
+	.nav--item.has-sub:hover .nav--link {
+		background:#5c6a7a;
+	}
+	.nav--item.has-sub:hover + .nav--item:before {
+		display:none;
+	}
+	.nav--sub {
+		position:absolute;
+		left:0;
+		top:34px;
+		min-width:100%;
+		white-space:nowrap;
+		padding:2px 0 4px;
+		margin:0;
+		background:#5c6a7a;
+		-webkit-box-shadow:0 0 3px rgba(0,0,0,0.5);
+		box-shadow:0 0 3px rgba(0,0,0,0.5);
+		visibility:hidden;
+		-webkit-transition:all 0.1s ease-in;
+		transition:all 0.1s ease-in;
+		opacity:0;
+	}
+	.nav--item.has-sub:hover .nav--sub {
+		visibility:visible;
+		opacity:1;
+	}
+	.nav--sub a {
+		display:block;
+		color:#ffffff;
+		font-size:13px;
+		line-height:18px;
+		padding:5px 14px 5px 15px;
+	}
+	.nav--sub a:hover {
+		color:#999999;
+	}
+}
 @media all and (max-width:960px) {
+	.nav--item.has-sub .nav--link {
+		position:relative;
+		padding-right:30px;
+	}
+	.nav--item.has-sub .nav--link:after {
+		content:'';
+		position:absolute;
+		right:10px;
+		top:14px;
+		border-left:4px solid transparent;
+		border-right:4px solid transparent;
+		border-top:4px solid #ffffff;
+	}
+	.nav--link:hover {
+		color:#ffffff;
+	}
+	.nav--sub {
+		display:none;
+		margin:0;
+	}
+	.nav--item.is-active .nav--link:after {
+		-webkit-transform:rotate(180deg);
+		transform:rotate(180deg);
+	}
+	.nav--item.is-active .nav--sub {
+		display:block;
+	}
+	.nav--sub a {
+		display:block;
+		color:#ffffff;
+		font-size:14px;
+		line-height:19px;
+		padding:6px 10px 10px 20px;
+		border-bottom:1px solid rgba(255,255,255,0.17);
+	}
 	.mobile-hide {
 		display:none;
 	}
