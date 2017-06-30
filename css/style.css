@@ -694,6 +694,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:7px 15px;
 	border-bottom:1px solid #e3e3e3;
 }
+.lc__nav--list li.active a,
+.lc__nav--list a:hover {
+	color:#e62e04;
+}
 .lc__nav--list a.special {
 	color:#e62e04;
 	font-weight:bold;
