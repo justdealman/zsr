@@ -252,6 +252,20 @@ $(function() {
 			change();
 		})
 	});
+	$('.compare').each(function() {
+		var length = $('.compare__titles li').size();
+		for ( var i=1; i<=length; i++ ) {
+			var max = $('.compare__titles li:nth-child('+i+')').outerHeight();
+			var h = max;
+			$('.compare--list li:nth-child('+i+')').each(function() {
+				h = $(this).outerHeight();
+				if ( h > max ) {
+					max = h;
+				}
+			});
+			$('.compare__titles li:nth-child('+i+'), .compare--list li:nth-child('+i+')').outerHeight(max);
+		}
+	});
 });
 $(function() {
 	$('.lc__filter--item').each(function() {
