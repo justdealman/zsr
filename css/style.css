@@ -1122,6 +1122,25 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	vertical-align:top;
 	margin:-5px -1px -5px 0;
 }
+.item-card--trade {
+	font-size:12px;
+	line-height:24px;
+	text-align:right;
+	padding:16px 15px 9px;
+	margin:0;
+	border-top:1px solid #e3e3e3;
+	border-bottom:1px solid #e3e3e3;
+}
+.item-card--trade span {
+	display:inline-block;
+	font-size:24px;
+	vertical-align:top;
+	margin:-3px -1px 3px 0;
+}
+.item-card--trade em {
+	float:left;
+	font-style:normal;
+}
 .item-card--options {
 	position:relative;
 	height:55px;
@@ -2776,15 +2795,40 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:17px;
 	font-weight:normal;
 	padding:0;
-	margin:0 0 16px;
+	margin:0 0 20px;
 }
 .card__info--price {
+	display:inline-block;
+	min-width:171px;
 	color:#000000;
 	font-size:28px;
 	line-height:38px;
 	font-weight:normal;
+	vertical-align:top;
 	padding:0;
-	margin:0 0 14px;
+	margin:0 17px 14px 0;
+}
+.card__info--price span {
+	display:block;
+	color:#263238;
+	font-size:12px;
+	line-height:16px;
+	margin:0 0 2px;
+}
+.card__info--tip {
+	display:inline-block;
+	width:180px;
+	vertical-align:top;
+	padding:5px 9px 4px;
+	margin:5px 0 20px;
+	background:#f5f5f5;
+	border:1px solid #e2e2e2;
+}
+.card__info--tip p {
+	color:#263238;
+	font-size:12px;
+	line-height:17px;
+	margin:0;
 }
 .card__info .quantity-e {
 	margin:0 0 15px;
@@ -2994,6 +3038,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.basket__item--quantity {
 		padding:15px 15px 45px;
+	}
+	.card__info--tip {
+		display:block;
+		margin-top:-5px;
 	}
 }
 @media all and (min-width:961px) {
@@ -3411,6 +3459,20 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.item-card--price span {
 		font-size:22px;
 		margin:-2px 0 2px 0;
+	}
+	.item-card--trade {
+		line-height:20px;
+		text-align:center;
+		padding:2px 10px 4px;
+	}
+	.item-card--trade em {
+		display:block;
+		float:none;
+		margin:0 0 3px;
+	}
+	.item-card--trade span {
+		font-size:20px;
+		margin:-1px 0 1px 0;
 	}
 	.item-card--compare {
 		left:10px;
@@ -4015,6 +4077,11 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 		-webkit-column-count:1;
 		-moz-column-count:1;
 		column-count:1;
+	}
+	.card__info--price {
+		display:block;
+		min-width:0;
+		margin:0 0 14px;
 	}
 }
 @media all and (max-width:800px) {
