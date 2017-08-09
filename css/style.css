@@ -2688,6 +2688,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin:0 0 20px;
 	border-bottom:1px solid #e62e04;
 }
+.new-item img {
+	max-width:100%;
+	height:auto;
+}
 .new-item .wide {
 	width:100%;
 	height:auto;
