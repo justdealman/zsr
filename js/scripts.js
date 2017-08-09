@@ -67,6 +67,10 @@ $(function() {
 			}
 		]
 	});
+	setIntro();
+	$('.intro-slider__row').on('afterChange', function() {
+		setIntro();
+	});
 	$('.partners-slider__row .item').each(function() {
 		$(this).css({
 			width: $(this).outerWidth()
@@ -213,7 +217,6 @@ $(function() {
 	$(window).on('resize', function() {
 		detectDevice();
 		setPicRatio();
-		setIntro();
 		if ( justSwitched ) {
 			if ( isMobile ) {
 				$('.panel').append('<span class="menu-close"></span>');
