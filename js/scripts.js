@@ -231,6 +231,9 @@ $(function() {
 				closeMobileSeach();
 			}
 		}
+		if ( !isMobile && $('.header__search').hasClass('is-active') ) {
+			recountSearchResults();
+		}
 	});
 	$(window).trigger('resize');
 	
@@ -249,6 +252,38 @@ $(function() {
 	});
 	$(document).on('click', '.search-close', function() {
 		closeMobileSearch();
+	});
+	function recountSearchResults() {
+		var e = $('.header__search');
+		var t = $('.search-results');
+		t.css({
+			'left': e.offset().left,
+			'top': e.offset().top,
+			'width': e.outerWidth()
+		});
+		$('.search-results__row').css({
+			'max-height': $(window).height()-(t.offset().top-$(document).scrollTop())-71
+		});
+	}
+	function hideSearchResults() {
+		$('.header__search').removeClass('is-active');
+		$('.search-results').removeClass('is-dropped');
+	}
+	$('.header__search input[type="text"]').on('keyup focus', function() {
+		var p = $(this).parents('.header__search');
+		var r = $('.search-results');
+		if ( $(this).val() !== '' ) {
+			p.addClass('is-active');
+			r.addClass('is-dropped');
+			recountSearchResults();
+		} else {
+			hideSearchResults();
+		}
+	});
+	$(document).on('click', function(e) {
+		if ( !$(e.target).closest('.header__search').length && !$(e.target).closest('.search-results').length ) {
+			hideSearchResults();
+		}
 	});
 });
 $(function() {
