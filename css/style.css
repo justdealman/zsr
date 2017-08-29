@@ -3064,6 +3064,36 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .search-results li:last-child a {
 	border-bottom-width:0;
 }
+.not-found {
+	color:#4a4a4a;
+	text-align:center;
+	padding:32px 0 26px;
+}
+.not-found a {
+	color:#007fff;
+	text-decoration:underline;
+}
+.not-found a:hover {
+	text-decoration:none;
+}
+.not-found h4 {
+	font-size:24px;
+	line-height:30px;
+	font-weight:normal;
+	text-transform:uppercase;
+	letter-spacing:2px;
+	padding:0;
+	margin:0 0 7px;
+}
+.not-found p {
+	font-size:14px;
+	line-height:18px;
+	margin:0 0 10px;
+}
+.not-found img {
+	vertical-align:top;
+	margin:20px 0 10px;
+}
 
 @media all and (max-width:1230px) {
 	.catalog-grid li {
@@ -4240,6 +4270,23 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	.search-close:after {
 		-webkit-transform:rotate(45deg);
 		transform:rotate(45deg);
+	}
+	.not-found {
+		padding:22px 10px 6px;
+	}
+	.not-found h4 {
+		font-size:16px;
+		line-height:22px;
+		letter-spacing:1px;
+	}
+	.not-found p {
+		font-size:12px;
+		line-height:16px;
+	}
+	.not-found img {
+		width:300px;
+		height:auto;
+		margin:10px auto 10px;
 	}
 }
 @media all and (max-width:800px) {
