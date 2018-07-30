@@ -3,7 +3,7 @@
 <head>
 	<title>ZSR</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
@@ -16,7 +16,33 @@
 			<div class="panel__row">
 				<div class="nav">
 					<ul class="nav__list">
-						<li class="nav--item"><a href="#" class="nav--link">О компании</a></li>
+						<li class="nav--item has-sub mobile-show">
+							<a href="#" class="nav--link">Каталог</a>
+							<ul class="nav--sub">
+								<li><a href="#" class="special">Акции</a></li>
+								<li><a href="#">Общестроительные материалы</a></li>
+								<li><a href="#">Кровля, гидроизоляция, водосток</a></li>
+								<li><a href="#">Теплоизоляция</a></li>
+								<li><a href="#">Древесные материалы</a></li>
+								<li><a href="#">Внутренняя отделка</a></li>
+								<li><a href="#">Водоснабжение, отопление, канализация</a></li>
+								<li><a href="#">Электрика</a></li>
+								<li><a href="#">вентиляция</a></li>
+								<li><a href="#">Лакокрасочные материалы, клей, пена и герметики</a></li>
+								<li><a href="#">Инструмент, крепеж</a></li>
+								<li><a href="#">Хозтовары</a></li>
+								<li><a href="#">Садовый инвентарь</a></li>
+							</ul>
+						</li>
+						<li class="nav--item has-sub">
+							<a href="#" class="nav--link">О компании</a>
+							<ul class="nav--sub">
+								<li><a href="#">Контракты</a></li>
+								<li><a href="#">Фотогалерея</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">История</a></li>
+							</ul>
+						</li>
 						<li class="nav--item"><a href="#" class="nav--link">Новости</a></li>
 						<li class="nav--item"><a href="#" class="nav--link">Инфо</a></li>
 						<li class="nav--item"><a href="#" class="nav--link">Поставщикам</a></li>
@@ -37,56 +63,11 @@
 					<a href="#" class="header__catalog--title">Каталог</a>
 				</div>
 				<div class="header__search">
-					<input type="text" placeholder="Поиск по товарам...">
+					<input type="text" placeholder="Поиск...">
 					<input type="submit" value="">
 				</div>
+				<a href="tel:+73852500085" class="header--phone"></a>
 				<a href="#" class="header--basket">Список<br> покупок<i></i></a>
-				<div class="basket-drop">
-					<div class="basket-drop__item">
-						<div class="pic">
-							<img src="./pic/basket-1.jpg" width="123" height="100" class="img-contain" alt="">
-						</div>
-						<h3>Кирпич рядовой М-100<br> г. Черепаново</h3>
-						<p>(Артикул: 120192518)</p>
-						<div class="quantity-e">
-							<span class="minus"></span>
-							<input type="text" value="2">
-							<span class="plus"></span>
-						</div>
-						<h6>3 485,00 Р</h6>
-					</div>
-					<div class="basket-drop__item">
-						<div class="pic">
-							<img src="./pic/basket-1.jpg" width="123" height="100" class="img-contain" alt="">
-						</div>
-						<h3>Кирпич рядовой М-100<br> г. Черепаново</h3>
-						<p>(Артикул: 120192518)</p>
-						<div class="quantity-e">
-							<span class="minus"></span>
-							<input type="text" value="2">
-							<span class="plus"></span>
-						</div>
-						<h6>3 485,00 Р</h6>
-					</div>
-					<div class="basket-drop__item">
-						<div class="pic">
-							<img src="./pic/basket-1.jpg" width="123" height="100" class="img-contain" alt="">
-						</div>
-						<h3>Кирпич рядовой М-100<br> г. Черепаново</h3>
-						<p>(Артикул: 120192518)</p>
-						<div class="quantity-e">
-							<span class="minus"></span>
-							<input type="text" value="2">
-							<span class="plus"></span>
-						</div>
-						<h6>3 485,00 Р</h6>
-					</div>
-					<div class="basket-drop__total">
-						<p>Всего товаров: <span>3</span></p>
-						<p>На сумму: <strong>16 455,00 Р</strong></p>
-					</div>
-					<button class="basket-drop--button">Перейти к списку покупок</button>
-				</div>
 			</div>
 		</header>
 		<div class="page-title">
@@ -98,6 +79,7 @@
 				<li>Сравнение</li>
 			</ul>
 			<div class="compare">
+				<span class="compare--title-h2">Шуруповерты</span>
 				<div class="compare__filter">
 					<ul>
 						<li class="active">Все параметры</li>

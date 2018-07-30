@@ -3,7 +3,7 @@
 <head>
 	<title>ZSR</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
@@ -16,7 +16,33 @@
 			<div class="panel__row">
 				<div class="nav">
 					<ul class="nav__list">
-						<li class="nav--item"><a href="#" class="nav--link">О компании</a></li>
+						<li class="nav--item has-sub mobile-show">
+							<a href="#" class="nav--link">Каталог</a>
+							<ul class="nav--sub">
+								<li><a href="#" class="special">Акции</a></li>
+								<li><a href="#">Общестроительные материалы</a></li>
+								<li><a href="#">Кровля, гидроизоляция, водосток</a></li>
+								<li><a href="#">Теплоизоляция</a></li>
+								<li><a href="#">Древесные материалы</a></li>
+								<li><a href="#">Внутренняя отделка</a></li>
+								<li><a href="#">Водоснабжение, отопление, канализация</a></li>
+								<li><a href="#">Электрика</a></li>
+								<li><a href="#">вентиляция</a></li>
+								<li><a href="#">Лакокрасочные материалы, клей, пена и герметики</a></li>
+								<li><a href="#">Инструмент, крепеж</a></li>
+								<li><a href="#">Хозтовары</a></li>
+								<li><a href="#">Садовый инвентарь</a></li>
+							</ul>
+						</li>
+						<li class="nav--item has-sub">
+							<a href="#" class="nav--link">О компании</a>
+							<ul class="nav--sub">
+								<li><a href="#">Контракты</a></li>
+								<li><a href="#">Фотогалерея</a></li>
+								<li><a href="#">Вакансии</a></li>
+								<li><a href="#">История</a></li>
+							</ul>
+						</li>
 						<li class="nav--item"><a href="#" class="nav--link">Новости</a></li>
 						<li class="nav--item"><a href="#" class="nav--link">Инфо</a></li>
 						<li class="nav--item"><a href="#" class="nav--link">Поставщикам</a></li>
@@ -37,9 +63,10 @@
 					<a href="#" class="header__catalog--title">Каталог</a>
 				</div>
 				<div class="header__search">
-					<input type="text" placeholder="Поиск по товарам...">
+					<input type="text" placeholder="Поиск...">
 					<input type="submit" value="">
 				</div>
+				<a href="tel:+73852500085" class="header--phone"></a>
 				<a href="#" class="header--basket">Список<br> покупок<i></i></a>
 			</div>
 		</header>
@@ -127,8 +154,10 @@
 						</ul>
 					</div>
 					<div class="card__info">
-						<h1>Кирпич М-100<br> (г. Черепаново)/396, Поддон</h1>
-						<h6 class="card__info--code">(Артикул: 13393085)</h6>
+						<div class="card__title">
+							<h1>Кирпич М-100<br> (г. Черепаново)/396, Поддон</h1>
+							<h6 class="card__info--code">(Артикул: 13393085)</h6>
+						</div>
 						<h3 class="card__info--price"><span>Оптовая цена:</span> 3 485,00 Р</h3>
 						<div class="card__info--tip">
 							<p>Розничную цену уточняйте<br> в магазинах или по телефону</p>
@@ -157,21 +186,29 @@
 				</div>
 				<div class="details">
 					<ul class="details__nav">
-						<li class="active"><a href="#">Характеристики</a></li>
-						<li><a href="#">Доставка</a></li>
+						<li class="active"><a href="1" data-tab-link>Характеристики</a></li>
+						<li><a href="2" data-tab-link>Доставка</a></li>
 					</ul>
 					<div class="details__info">
-						<ul class="details__info--list">
-							<li><span>Применение:</span> рядовой кирпич, возведение стен</li>
-							<li><span>Вид материала:</span> силикатный</li>
-							<li><span>Размер (тип):</span> одинарный 250х120х65</li>
-							<li><span>Пустотность:</span> полнотелый</li>
-							<li><span>Поверхность:</span> гладкая</li>
-							<li><span>Марка прочности:</span> М-150</li>
-							<li><span>Размеры:</span> 250 x 120 x 65мм</li>
-							<li><span>Упаковка:</span> поддон/пленка</li>
-							<li><span>Поддоны:</span> возвратные</li>
-						</ul>
+						<div class="details__tab is-opened" data-tab="1">
+							<ul class="details__info--list">
+								<li><span>Применение:</span> рядовой кирпич, возведение стен</li>
+								<li><span>Вид материала:</span> силикатный</li>
+								<li><span>Размер (тип):</span> одинарный 250х120х65</li>
+								<li><span>Пустотность:</span> полнотелый</li>
+								<li><span>Поверхность:</span> гладкая</li>
+								<li><span>Марка прочности:</span> М-150</li>
+								<li><span>Размеры:</span> 250 x 120 x 65мм</li>
+								<li><span>Упаковка:</span> поддон/пленка</li>
+								<li><span>Поддоны:</span> возвратные</li>
+							</ul>
+						</div>
+						<div class="details__tab" data-tab="2">
+							<ul class="details__info--list">
+								<li><span>Поверхность:</span> гладкая</li>
+								<li><span>Марка прочности:</span> М-150</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
