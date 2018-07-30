@@ -3113,7 +3113,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	vertical-align:top;
 	margin:20px 0 10px;
 }
-
+.history img {
+	max-width:100%;
+	height:auto;
+}
 @media all and (max-width:1230px) {
 	.catalog-grid li {
 		width:33.33%;
