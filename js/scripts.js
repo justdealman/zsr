@@ -231,6 +231,17 @@ $(function() {
 		}
 	});
 	
+	function placeholderSwitch() {
+		$('[data-placeholder]').each(function() {
+			if ( !isMobile ) {
+				var device = 'desktop';
+			} else {
+				var device = 'mobile';
+			}
+			$(this).attr('placeholder',$(this).attr('data-'+device+'-placeholder'));
+		});
+	}
+	
 	$(window).on('resize', function() {
 		detectDevice();
 		setPicRatio();
@@ -264,6 +275,7 @@ $(function() {
 				}
 				closeMobileMenu();
 			}
+			placeholderSwitch();
 		}
 		if ( !isMobile && $('.header__search').hasClass('is-active') ) {
 			recountSearchResults();
