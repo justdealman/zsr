@@ -2505,7 +2505,13 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 	padding:0 0 66px 214px;
 }
 .compare--title-h2 {
-	display:none;
+	display:block;
+	color:#263238;
+	font-size:22px;
+	line-height:28px;
+	font-weight:bold;
+	padding:0;
+	margin:0 0 20px;
 }
 .compare__filter {
 	position:absolute;
@@ -4722,12 +4728,7 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 		margin:-6px 0 40px;
 	}
 	.compare--title-h2 {
-		display:block;
-		color:#263238;
-		font-size:22px;
-		line-height:28px;
-		font-weight:bold;
-		margin:0 15px 19px;
+		margin:0 15px 20px;
 	}
 	.compare__titles {
 		display:none;
