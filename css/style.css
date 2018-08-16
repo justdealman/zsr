@@ -3158,6 +3158,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 	height:233px;
 }
 @media all and (max-width:1230px) {
+	.header--phone {
+		right:180px;
+	}
 	.catalog-grid li {
 		width:33.33%;
 	}
@@ -3584,7 +3587,25 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 		width:calc(100% - 20px);
 	}
 	.header--phone {
-		display:none;
+		overflow:hidden;
+		right:50px;
+		top:0;
+		font-size:0;
+		width:32px;
+		height:60px;
+		text-indent:50px;
+		white-space:nowrap;
+		padding:0;
+		margin:0;
+	}
+	.header--phone:before {
+		content:'';
+		position:absolute;
+		left:50%;
+		width:10px;
+		height:27px;
+		margin:-13px 0 0 -4px;
+		background-size:100% 100%;
 	}
 	.header-m {
 		display:block;
