@@ -3657,9 +3657,9 @@ body.compensate-for-scrollbar{overflow:hidden}.fancybox-active{height:auto}.fanc
 	}
 	.intro-slider .item .bg {
 		display:block !important;
-		width:120%;
+		width:100%;
 		height:auto;
-		margin-left:-10%;
+		margin-left:0;
 	}
 	.partners-slider {
 		margin:0 15px 20px;
